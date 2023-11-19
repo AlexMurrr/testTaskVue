@@ -1,9 +1,7 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout>
+    <q-header>
       <q-toolbar>
-
-
         <q-toolbar-title>
           PopupTest
         </q-toolbar-title>

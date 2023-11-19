@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center">
     <div class="q-pa-md q-gutter-sm">
-    <q-btn color="primary" class="btnStart">
+    <q-btn color="accent" class="btnStart"  @click="isNone = !isNone" :class="{btnNone: isNone}">
         Н а ч а т ь
     </q-btn>
   </div>
@@ -9,18 +9,26 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-//import buttonStart from "../components/btnQ.vue";
+export default {
+  name: "IndexPage",
+  data() {
+    return {
+      isNone: false,
+    };
+  },
 
-export default defineComponent({
-  name: 'IndexPage'
-})
+  methods: {
+
+  },
+};
 </script>
 
 <style>
   .btnStart{
-    display: inline;
     height: 50px;
     width: 200px;
+  }
+  .btnNone{
+    display: none;
   }
 </style>
