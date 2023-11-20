@@ -1,18 +1,9 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="q-pa-md q-gutter-sm">
-    <q-btn color="accent" class="btnStart"  @click="isNone = !isNone" :class="{btnNone: isNone}">
-        Н а ч а т ь
-    </q-btn>
-  </div>
-
 
   <div class="q-pa-md q-gutter-sm">
 
-    <q-btn label="Full Height" color="primary" @click="fullHeight = true" />
-
-
-
+    <q-btn label="старт" size="xl" color="primary" @click="fullHeight = true" />
 
     <q-dialog
       v-model="fullHeight"
@@ -20,15 +11,28 @@
     >
       <q-card class="column full-height" style="width: 300px">
         <q-card-section>
-          <div class="text-h6">Full Height</div>
+          <div class="text-h6">Введите</div>
         </q-card-section>
 
         <q-card-section class="col q-pt-none">
-          Click/Tap on the backdrop.
+          input
+        </q-card-section>
+        <q-card-section class="col q-pt-none">
+          input
+        </q-card-section>
+        <q-card-section class="col q-pt-none">
+          input
+        </q-card-section>
+        <q-card-section class="col q-pt-none">
+          input
+        </q-card-section>
+        <q-card-section class="col q-pt-none">
+          input
         </q-card-section>
 
+
         <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="OK" v-close-popup />
+          <q-btn flat label="Далее" v-close-popup />
         </q-card-actions>
       </q-card>
     </q-dialog>
