@@ -11,25 +11,12 @@
     >
       <q-card class="column full-height" style="width: 300px">
         <q-card-section>
-          <div class="text-h6">Введите</div>
+          <div class="text-h6">Введите:</div>
         </q-card-section>
 
-        <q-card-section class="col q-pt-none">
-          input
+        <q-card-section v-for="item in items" class="col q-pt-none">
+          <q-input :label=item.label v-model=item.value />
         </q-card-section>
-        <q-card-section class="col q-pt-none">
-          input
-        </q-card-section>
-        <q-card-section class="col q-pt-none">
-          input
-        </q-card-section>
-        <q-card-section class="col q-pt-none">
-          input
-        </q-card-section>
-        <q-card-section class="col q-pt-none">
-          input
-        </q-card-section>
-
 
         <q-card-actions align="right" class="bg-white text-teal">
           <q-btn flat label="Далее" v-close-popup />
@@ -46,7 +33,12 @@ export default {
   data() {
     return {
       isNone: false,
-      fullHeight: false
+      fullHeight: false,
+      items:[{label: 'Фамилия', value: ''},
+             {label:'Имя', value:''},
+             {label:'Отчество', value:''},
+             {label:'Специальность', value:''},
+             {label:'Опыт', value:''},]
     };
   },
 
@@ -57,11 +49,5 @@ export default {
 </script>
 
 <style>
-  .btnStart{
-    height: 50px;
-    width: 200px;
-  }
-  .btnNone{
-    display: none;
-  }
+
 </style>
