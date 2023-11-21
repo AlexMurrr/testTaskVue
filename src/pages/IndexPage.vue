@@ -24,15 +24,18 @@
       </q-card>
     </q-dialog>
   </div>
+  <InputValue :isNone=isNone></InputValue>
   </q-page>
 </template>
 
 <script>
+import InputValue from '../components/InputValue.vue'
 export default {
   name: "IndexPage",
+  components: {InputValue},
   data() {
     return {
-      isNone: false,
+      isNone: true,
       fullHeight: false,
       items:[{label: 'Фамилия', value: ''},
              {label:'Имя', value:''},
