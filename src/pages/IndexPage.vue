@@ -3,7 +3,7 @@
 
   <div class="q-pa-md q-gutter-sm">
 
-    <q-btn label="старт" size="xl" color="primary" @click="isSecondDilogTrue()" />
+    <q-btn label="старт" size="xl" color="primary" @click="fullHeight=true" />
 
     <q-dialog
       v-model="fullHeight"
