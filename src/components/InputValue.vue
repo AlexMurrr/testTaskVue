@@ -21,21 +21,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "InputValue",
-  props: {
-    isSecondDilog: {
-            type:Boolean
-        }
+<script setup>
+import {useStore} from '../stores/varPopup.js'
+import { storeToRefs } from "pinia";
+import { ref } from "vue";
 
-    },
-  data() {
-    return {
-      fullHeight: this.isSecondDilog,
-      }
-    }
-  }
+const openCloseDilog = useStore();
+
 </script>
 
 <style>
