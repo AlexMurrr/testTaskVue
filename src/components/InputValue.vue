@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-dialog
-      v-model="fullHeight"
+     v-model="fullHeight"
       full-height
     >
       <q-card class="column full-height" style="width: 300px">
@@ -10,7 +10,7 @@
         </q-card-section>
 
         <q-card-section v-for="item in items" class="col q-pt-none">
-          <q-input :label=item.label v-model=item.value />
+          <!-- <q-input :label=item.label v-model=item.value /> -->
         </q-card-section>
 
         <q-card-actions align="right" class="bg-white text-teal">
@@ -24,15 +24,12 @@
 <script>
 export default {
   name: "InputValue",
-  props: {
-    isSecondDilog: {
-            type:Boolean
-        }
-
-    },
+  // props: {
+  //   dialogVisible: Boolean,
+  // },
   data() {
     return {
-      fullHeight: this.isSecondDilog,
+      fullHeight: true,
       }
     }
   }

@@ -3,7 +3,7 @@
 
   <div class="q-pa-md q-gutter-sm">
 
-    <q-btn label="старт" size="xl" color="primary" @click="isSecondDilogTrue()" />
+    <q-btn label="старт" size="xl" color="primary" @click="fullHeight=true" />
 
     <q-dialog
       v-model="fullHeight"
@@ -19,12 +19,12 @@
         </q-card-section>
 
         <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="Далее" v-close-popup @click="isSecondDilogTrue()"/>
+          <q-btn flat label="Далее" v-close-popup @click="dialogVisible=true, console.log(dialogVisible)"/>
         </q-card-actions>
       </q-card>
     </q-dialog>
   </div>
-  <InputValue :isSecondDilog=isSecondDilog></InputValue>
+  <InputValue v-if="dialogVisible"></InputValue>
   </q-page>
 </template>
 
@@ -35,7 +35,7 @@ export default {
   components: {InputValue},
   data() {
     return {
-      isSecondDilog : false,
+      dialogVisible : true,
       fullHeight: false,
       items:[{label: 'Фамилия', value: ''},
              {label:'Имя', value:''},
