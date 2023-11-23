@@ -25,14 +25,14 @@
 export default {
   name: "InputValue",
   props: {
-    isNone: {
+    isSecondDilog: {
             type:Boolean
         }
 
     },
   data() {
     return {
-      fullHeight: this.isNone,
+      fullHeight: this.isSecondDilog,
       }
     }
   }
