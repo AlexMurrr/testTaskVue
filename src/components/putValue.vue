@@ -24,7 +24,8 @@
     </q-card>
   </q-dialog>
 </div>
-<inputValue v-if="dialogVisible" @toFalse="changedialogVisibleToFalse"></inputValue>
+<inputValue v-if="dialogVisible" @toFalse="changedialogVisibleToFalse"
+:items="items"></inputValue>
 </q-page>
 </template>
 
