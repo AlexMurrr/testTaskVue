@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-dialog
-     v-model="fullHeight"
+      v-model="fullHeight"
       full-height
     >
       <q-card class="column full-height" style="width: 300px">
@@ -9,12 +9,12 @@
           <div class="text-h6"></div>
         </q-card-section>
 
-        <q-card-section v-for="item in items" class="col q-pt-none">
-          <!-- <q-input :label=item.label v-model=item.value /> -->
-        </q-card-section>
+        <!-- <q-card-section v-for="item in items" class="col q-pt-none">
+          <q-input :label=item.label v-model=item.value />
+        </q-card-section> -->
 
         <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="Далее" v-close-popup />
+          <q-btn flat label="Далее" v-close-popup @click="toFalseVisibleDialod"/>
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -22,17 +22,26 @@
 </template>
 
 <script>
+
 export default {
-  name: "InputValue",
-  // props: {
-  //   dialogVisible: Boolean,
-  // },
+  name: "inputValue",
+
+  props: {
+    dialogVisible: Boolean,
+  },
   data() {
     return {
-      fullHeight: true,
-      }
+      fullHeight:true,
+    };
+      },
+
+    methods: {
+      toFalseVisibleDialod() {
+      this.$emit('toFalse', false);
     }
+    },
   }
+
 </script>
 
 <style>
